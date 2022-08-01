@@ -12,9 +12,9 @@ pipeline {
         stage('Docker Build') {
             steps {
                 script {
-                    dockerapp = docker.build("accerq/i-educar:${env.BUILID}"),
+                    dockerapp = docker.build("accerq/i-educar:${env.BUILD_ID}"),
                         '-f docker/php/Dockerfile .'
-                    dockerapp = docker.build("accerq/i-educar:${env.BUILID}"),
+                    dockerapp = docker.build("accerq/i-educar:${env.BUILD_ID}"),
                         '-f docker/nginx/Dockerfile .'
                 }
             }
