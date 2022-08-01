@@ -12,7 +12,8 @@ pipeline {
         stage('Docker Build') {
             steps {
                 script {
-                    dockerapp = docker.build("accerq/ieducar-php:latest"), '-f docker/php/Dockerfile .'
+                    dockerapp = docker.build("accerq/ieducar-php:latest", 
+                        '-f docker/php/Dockerfile .')
                 }
             }
         }
